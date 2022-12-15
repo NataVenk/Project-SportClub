@@ -17,3 +17,5 @@ Class.belongsTo(Intsructor, {
 
 
 module.exports = { Member, Class, Instructor};
+
+// matt was here adding a comment.
