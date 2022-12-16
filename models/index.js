@@ -11,11 +11,9 @@ Class.hasMany(Member, {
   foreignKey: 'member_id'
 });
 
-Class.belongsTo(Intsructor, {
+Class.belongsTo(Instructor, {
     foreignKey: 'instructor_id'
   });
 
 
-module.exports = { Member, Class, Instructor};
-
-// matt was here adding a comment.
+module.exports = {Member, Class, Instructor};
