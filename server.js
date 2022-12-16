@@ -8,13 +8,9 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5505;
 
-
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
-
-
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
