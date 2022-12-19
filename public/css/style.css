@@ -9,9 +9,11 @@ body {
 }
 
 .header {
-    font-family: forma-djr-banner, sans-serif;
-    font-style: normal;
+    font-family: nasalization, sans-serif;
+
     font-weight: 400;
+
+    font-style: normal;
 }
 
 .main-image {
@@ -20,10 +22,11 @@ body {
 
 }
 
+
 .logo-center {
-    font-family: forma-djr-banner, sans-serif;
+    font-family: nasalization, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-weight: 800;
     font-size: 65px;
     color: #22333b;
     position: absolute;
@@ -35,11 +38,9 @@ body {
     flex: 0 1 300px;
     padding: 5px;
     width: 25%;
-    min-height: 100%;
-    min-width: 35%;
     border: 3px solid;
     border-style: solid;
     border-width: medium;
-    background-color: rgb(182, 224, 241);
+    background-color: rgb(170, 226, 238);
     color: black;
 }
