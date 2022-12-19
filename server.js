@@ -6,7 +6,7 @@ const path = require('path');
 // const hbs = exphbs.create({ helpers });
 
 const app = express();
-const PORT = process.env.PORT || 5505;
+const PORT = process.env.PORT || 6505;
 
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
