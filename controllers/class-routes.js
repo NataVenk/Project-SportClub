@@ -33,15 +33,26 @@ const classes = [
 ];
 
 //get all classes
-router.get('/', async (req, res) => {
-  res.render('all'); // all + main
+router.get('/classes', async (req, res) => {
+  res.render('all'); 
 });
 
 //get one class
-router.get('/class/:num', async (req, res) => {
-  console.log(classes[req.params.num - 1]);
+
+
+// TODO: Add a route called `/dish/:num` below
+// router.get('/dish/:num', (req, res) => {
+
+//   return res.render('dish', dishes[req.params.num - 1]);
+// })
+
+
+router.get('/classList', (req, res) => {
   
-  return res.render('class', classes[req.params.num - 1]); 
+  
+  return res.render('classList', {
+    classes: classes
+  }); 
  
 });
 
