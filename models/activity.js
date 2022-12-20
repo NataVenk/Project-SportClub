@@ -38,7 +38,7 @@ Activity.init(
       allowNull: false,
     },
 
-    day5: {
+   day5: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
