@@ -11,15 +11,6 @@ require('dotenv').config(); // allow access to .env
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const app = express();
-const PORT = process.env.PORT || 6505;
-
-app.engine('handlebars', exphbs.engine());
-app.set('view engine', 'handlebars');
-app.set('views', './views');
-
-app.use(express.static(path.join(__dirname, 'public')));
-
 const sess = {
   secret: process.env.SECRET, // gets secret from .env
   cookie: {
@@ -35,7 +26,16 @@ const sess = {
   })
 };
 
+const app = express();
+const PORT = process.env.PORT || 6505;
+
 app.use(session(sess));
+
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
