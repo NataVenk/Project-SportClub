@@ -2,46 +2,46 @@
     {
         "instructor_name": "Matt",
         "specialty": "crossFit",
-        "day1": false,
-        "day2": true,
-        "day3": true,
-        "day4": true,
-        "day5": true
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true
     },
     {
         "instructor_name": "Alejandro",
         "specialty": "bootCamp",
-        "day1": true,
-        "day2": true,
-        "day3": true,
-        "day4": false,
-        "day5": true
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true
     },
     {
         "instructor_name": "Paul",
         "specialty": "swimming",
-        "day1": true,
-        "day2": true,
-        "day3": true,
-        "day4": true,
-        "day5": false
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false
     },
     {
         "instructor_name": "Natalia",
         "specialty": "cardio",
-        "day1": true,
-        "day2": true,
-        "day3": false,
-        "day4": true,
-        "day5": true
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false
     },
     {
         "instructor_name": "Muchir",
         "specialty": "yoga",
-        "day1": true,
-        "day2": true,
-        "day3": false,
-        "day4": true,
-        "day5": true
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false
     }
 ]
