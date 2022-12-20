@@ -41,7 +41,7 @@
         "monday": true,
         "tuesday": true,
         "wednesday": true,
-        "thursday": true,
+        "thursday": false,
         "friday": false
     }
 ]
