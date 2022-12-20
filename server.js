@@ -42,6 +42,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Sets up the routes
 
+app.use(require('./controllers/some-routes'));
+app.use(require('./controllers/class-routes'));
+
 // app.use(require('./controllers/..'));
 app.use(routes);
 

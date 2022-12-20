@@ -33,7 +33,7 @@ const classes = [
 ];
 
 //get all classes
-router.get('/classes', async (req, res) => {
+router.get('/class', async (req, res) => {
   res.render('all'); 
 });
 
@@ -47,10 +47,10 @@ router.get('/classes', async (req, res) => {
 // })
 
 
-router.get('/classList', (req, res) => {
+router.get('/classlist', (req, res) => {
   
   
-  return res.render('classList', {
+  return res.render('classlist', {
     classes: classes
   }); 
  
