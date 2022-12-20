@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(require('./controllers/some-routes'));
+app.use(require('./controllers'));
 
 // app.use(require('./controllers/..'));
 app.use(routes);

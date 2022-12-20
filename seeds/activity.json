@@ -2,7 +2,7 @@
     {
         "activity_name": "Strength Fitness",
         "description": "Set of exercises to strenghen your core",
-        "instructor_name": "Matt",
+        "instructor_id": 1,
         "day1": false,
         "day2": true,
         "day3": true,
@@ -13,7 +13,7 @@
     {
         "activity_name": "Yoga",
         "description": "Relax, concentrate and Stretch",
-        "instructor_name": "Muchir",
+        "instructor_id": 2,
         "day1": false,
         "day2": true,
         "day3": true,
@@ -24,7 +24,7 @@
     {
         "activity_name": "Cross Fit",
         "description": "A mix of everything",
-        "instructor_name": "Paul",
+        "instructor_id": 3,
         "day1": true,
         "day2": true,
         "day3": true,
@@ -35,7 +35,7 @@
     {
         "activity_name": "Cardio",
         "description": "A mix of everything",
-        "instructor_name": "Natalia",
+        "instructor_id": 4,
         "day1": true,
         "day2": false,
         "day3": true,
@@ -46,7 +46,7 @@
     {
         "activity_name": "Swimming",
         "description": "A pool party",
-        "instructor_name": "Paul",
+        "instructor_id": 5,
         "day1": true,
         "day2": false,
         "day3": true,

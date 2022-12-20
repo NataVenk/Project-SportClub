@@ -28,11 +28,20 @@
     },
     {
         "instructor_name": "Natalia",
-        "specialty": "Cardio",
+        "specialty": "cardio",
         "monday": true,
         "tuesday": true,
-        "wednesday": false,
+        "wednesday": true,
         "thursday": true,
-        "friday": true
+        "friday": false
+    },
+    {
+        "instructor_name": "Muchir",
+        "specialty": "yoga",
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false
     }
 ]

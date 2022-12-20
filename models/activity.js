@@ -14,8 +14,8 @@ Activity.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    instructor_name: {
-      type: DataTypes.STRING,
+    instructor_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     day1: {

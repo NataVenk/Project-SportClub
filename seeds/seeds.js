@@ -1,7 +1,8 @@
 const sequelize = require('../config/connection');
-const { Instructor, Member } = require('../models');
+const { Instructor, Member, Activity } = require('../models');
 const instructorData = require('./instructor.json');
 const memberData = require('./memberData.json');
+const activityData = require('./activity.json');
 
 
 //const userData = require('./userData.json');
@@ -11,6 +12,10 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   const instructors = await Instructor.bulkCreate(instructorData, {
+    individualHooks: true,
+    returning: true,
+  });
+  const activities = await Activity.bulkCreate(activityData, {
     individualHooks: true,
     returning: true,
   });
