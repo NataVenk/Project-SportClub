@@ -1,0 +1,72 @@
+:root {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-size: 50%;
+}
+
+body {
+    background-color: #252033;
+    display: block;
+    color: white;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: white;
+}
+
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: large;
+    font-weight: 200;
+}
+
+h1,h2{
+    font-size: 28px;
+    color: rgb(7, 146, 104);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 300;
+    color: rgb(252, 252, 252);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;   
+}
+
+/*containor wrap*/
+.row {
+    display: flex;
+    margin: 5% 15%;
+}
+
+.firstrow{
+   background-color: #362f49;
+   text-align: center;
+}
+
+.secondrow p {
+    margin-left: 10%;
+    font-size: larger;
+}
+
+/* Section are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+
+    header .row {
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        width: 300px;
+        flex-direction: column;
+    }
+}
