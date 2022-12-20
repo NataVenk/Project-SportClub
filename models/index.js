@@ -1,14 +1,17 @@
 const Member = require ('./member')
 const Activity = require('./activity');
 const Instructor = require('./instructor');
+const MemberActivity = require('./member-activities');
 
 Member.hasMany(Activity, {
+  through: MemberActivity, 
   foreignKey: 'member_id',
-  onDelete: 'CASCADE'
+  
 });
 
 Activity.hasMany(Member, {
-  foreignKey: 'member_id'
+  through: MemberActivity, 
+  foreignKey: 'activity_id'
 });
 
 Activity.belongsTo(Instructor, {

@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Instructor } = require('../models')
+const { Instructor, Activity } = require('../models');
+
 
 router.get('/test', (req, res) => {
     res.send('working');
@@ -35,11 +36,12 @@ router.get('/instrList', async (req, res) => {
 //routing to all activities
 router.get('/activlist', async (req, res) => {
     const activityResults = await Activity.findAll({
-
+include: "instructor"
     })
     const activities = activityResults.map(value => value.get({ plain: true }))
-    return res.render('activlist', {
-        activities: activities
+    console.log(activities)
+    return res.render('activity', {
+        activities
     });
 
 });

@@ -34,5 +34,14 @@
         "day3": false,
         "day4": true,
         "day5": true
+    },
+    {
+        "instructor_name": "Muchir",
+        "specialty": "yoga",
+        "day1": true,
+        "day2": true,
+        "day3": false,
+        "day4": true,
+        "day5": true
     }
 ]
