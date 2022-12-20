@@ -1,7 +1,7 @@
 [
     {
         "instructor_name": "Matt",
-        "specialty": "crossFit",
+        "specialty": "CrossFit",
         "monday": false,
         "tuesday": true,
         "wednesday": true,
@@ -10,16 +10,16 @@
     },
     {
         "instructor_name": "Alejandro",
-        "specialty": "bootCamp",
+        "specialty": "Boot Camp",
         "monday": true,
-        "tuesday": false,
+        "tuesday": true,
         "wednesday": true,
         "thursday": false,
         "friday": true
     },
     {
         "instructor_name": "Paul",
-        "specialty": "swimming",
+        "specialty": "Swimming",
         "monday": true,
         "tuesday": true,
         "wednesday": true,
