@@ -10,19 +10,13 @@ class Member extends Model {
 
 Member.init(
     {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
       first_name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       last_name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       email: {
         type: DataTypes.STRING,
