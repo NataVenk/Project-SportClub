@@ -14,6 +14,34 @@ Activity.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    instructor_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    day1: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+
+    day2: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+
+    day3: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+
+    day4: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+
+    day5: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     
   },
   {
