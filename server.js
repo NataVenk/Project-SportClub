@@ -40,15 +40,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Sets up the routes
-
 app.use(require('./controllers/some-routes'));
-app.use(require('./controllers/class-routes'));
 
 // app.use(require('./controllers/..'));
 app.use(routes);
 
-// Starts the server to begin listening
-app.listen(PORT, () => {
-    console.log('Server listening on: http://localhost:' + PORT);
-  });
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
+});
+
+
+
