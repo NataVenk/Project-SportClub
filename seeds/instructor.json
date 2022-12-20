@@ -1,0 +1,38 @@
+[
+    {
+        "instructor_name": "Matt",
+        "specialty": "crossFit",
+        "day1": false,
+        "day2": true,
+        "day3": true,
+        "day4": true,
+        "day5": true
+    },
+    {
+        "instructor_name": "Alejandro",
+        "specialty": "bootCamp",
+        "day1": true,
+        "day2": true,
+        "day3": true,
+        "day4": false,
+        "day5": true
+    },
+    {
+        "instructor_name": "Paul",
+        "specialty": "swimming",
+        "day1": true,
+        "day2": true,
+        "day3": true,
+        "day4": true,
+        "day5": false
+    },
+    {
+        "instructor_name": "Natalia",
+        "specialty": "cardio",
+        "day1": true,
+        "day2": true,
+        "day3": false,
+        "day4": true,
+        "day5": true
+    }
+]

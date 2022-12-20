@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Class extends Model {}
+class Activity extends Model {}
 
-Class.init(
+Activity.init(
   {
    
-    class_name: {
+    activity_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     
@@ -20,8 +20,8 @@ Class.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'class',
+    modelName: 'activity',
   }
 );
 
-module.exports = Class;
+module.exports = Activity;

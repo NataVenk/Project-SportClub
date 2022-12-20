@@ -1,6 +1,28 @@
 {
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
     "express-handlebars": "^6.0.6",
-    "express.js": "^1.0.0"
-  }
+    "express.js": "^1.0.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.27.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project-sportclub",
+  "description": "Updates to come.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NataVenk/Project-SportClub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataVenk/Project-SportClub/issues"
+  },
+  "homepage": "https://github.com/NataVenk/Project-SportClub#readme"
 }
