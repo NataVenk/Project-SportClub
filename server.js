@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers/some-routes'));
 app.use(require('./controllers/class-routes'));
+app.use(require('./controllers/instructor-routes'));
 // app.use(require('./controllers/..'));
 // app.use(routes);
 
