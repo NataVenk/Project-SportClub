@@ -12,7 +12,7 @@
         "instructor_name": "Alejandro",
         "specialty": "bootCamp",
         "monday": true,
-        "tuesday": true,
+        "tuesday": false,
         "wednesday": true,
         "thursday": false,
         "friday": true
