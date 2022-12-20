@@ -12,7 +12,7 @@ const Instructor = require('./instructor');
 // Activity.hasMany(Member, {
 //   through: MemberActivity, 
 //   foreignKey: 'activity_id'
-// });
+// })
 
 Activity.belongsTo(Instructor, {
     foreignKey: 'instructor_id'
