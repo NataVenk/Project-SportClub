@@ -1,0 +1,18 @@
+[
+    {
+        "activity_id": 1,
+        "member_id":1
+    },
+    {
+        "activity_id": 2,
+        "member_id":2
+    },
+    {
+        "activity_id": 3,
+        "member_id":1
+    },
+    {
+        "activity_id": 4,
+        "member_id":1
+    }
+]

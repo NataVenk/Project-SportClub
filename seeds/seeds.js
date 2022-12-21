@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { Instructor, Member, Activity } = require('../models');
+const { Instructor, Member, Activity, MemberActivity } = require('../models');
 const instructorData = require('./instructor.json');
 const memberData = require('./memberData.json');
 const activityData = require('./activity.json');
+const memberActivities = require('./member-activity.json')
 
 
 //const userData = require('./userData.json');
@@ -10,20 +11,29 @@ const activityData = require('./activity.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
+  console.log('====================seeding data==================')
 
-  const instructors = await Instructor.bulkCreate(instructorData, {
+  await Instructor.bulkCreate(instructorData, {
     individualHooks: true,
     returning: true,
   });
-  const activities = await Activity.bulkCreate(activityData, {
-    individualHooks: true,
-    returning: true,
-  });
+  console.log('====================instructor seeded data==================')
 
-  const members = await Member.bulkCreate(memberData, {
+  await Activity.bulkCreate(activityData, {
     individualHooks: true,
     returning: true,
   });
+  console.log('====================activities seeded data==================')
+   await Member.bulkCreate(memberData, {
+    individualHooks: true,
+    returning: true,
+  });
+  console.log('====================members seeded data==================')
+  await MemberActivity.bulkCreate(memberActivities, {
+    individualHooks: true,
+    returning: true,
+  });
+  console.log('====================members act data==================')
 
   /* for (const project of projectData) {
     await Project.create({
