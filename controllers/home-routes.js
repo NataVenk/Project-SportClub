@@ -15,7 +15,7 @@ router.get ('/', async (req,res)=> {
 })
 
 //routing to About us
-router.get('/aboutus', (req, res) => {
+router.get('/about-us', (req, res) => {
     res.render('page2-aboutus', {
         logged_in: req.session.logged_in
     });
