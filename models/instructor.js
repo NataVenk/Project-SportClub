@@ -16,27 +16,27 @@ Instructor.init(
       allowNull: false,
     },
 
-    day1: {
+    monday: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
 
-    day2: {
+    tuesday: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
 
-    day3: {
+    wednesday: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
 
-    day4: {
+    thursday: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
 
-    day5: {
+    friday: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
