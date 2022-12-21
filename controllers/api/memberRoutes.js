@@ -1,20 +1,23 @@
 const router = require('express').Router();
 const { Member, MemberActivity, Activity } = require('../../models');
 
-
-
-router.post('/', async (req, res) => {
+// CREATE new user
+router.post('/signup', async (req, res) => {
   try {
-    const userData = await Member.create(req.body);
+    const UserData = await Member.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    });
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
-      res.status(200).json(userData);
+      res.status(200).json(UserData);
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
@@ -41,7 +44,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
@@ -51,34 +54,33 @@ router.post('/login', async (req, res) => {
 });
 
 
-router.post("/activity", (req, res)=>{
-  if (!req.session.logged_in) {res.status(400).json("you need to be logged in")}
-MemberActivity.destroy({where:{member_id:req.session.user_id}})
-.then (()=>{
-  const array = req.body.activities.map(activity =>{
-    return {
-      member_id: req.session.user_id,
-      activity_id: activity
-    }
-  })
-  return MemberActivity.bulkCreate(array)
-}).then(memberActs => {
-  res.status(200).json("new activities updated")
-})
-.catch(err => {
-  res.status(500).json(err)
-})
-})
+router.post('/activity', (req, res) => {
+  if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
+  MemberActivity.destroy({ where: { member_id: req.session.user_id } })
+    .then(() => {
+      const array = req.body.activities.map(activity => {
+        return {
+          member_id: req.session.user_id,
+          activity_id: activity
+        }
+      })
+      return MemberActivity.bulkCreate(array)
+    }).then(memberActs => {
+      res.status(200).json("new activities updated")
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
+});
 
-
-router.put('/', (req, res)=>{
-  if (!req.session.logged_in) {res.status(400).json("you need to be logged in")}
-   Member.update(req.body,{
-    where:{id:req.session.user_id}
+router.put('/', (req, res) => {
+  if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
+  Member.update(req.body, {
+    where: { id: req.session.user_id }
   })
-  .then (member => {res.status(200).json(member)})
-  .catch (err=>res.status(500).json(err))
-})
+    .then(member => { res.status(200).json(member) })
+    .catch(err => res.status(500).json(err))
+});
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
@@ -90,11 +92,11 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.get('/fun',(req,res)=> {
-  Member.findAll({include: {model:Activity, through: MemberActivity}})
-  .then(members => {
-    res.json(members)
-  })
-})
+router.get('/fun', (req, res) => {
+  Member.findAll({ include: { model: Activity, through: MemberActivity } })
+    .then(members => {
+      res.json(members)
+    })
+});
 
 module.exports = router;

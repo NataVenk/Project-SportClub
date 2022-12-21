@@ -1,17 +1,17 @@
 [
-    {
-      "member_name": "Sally",
-      "email": "sal@hotmail.com",
-      "password": "password12345"
-    },
-    {
-      "member_name": "Lernan",
-      "email": "lernantino@gmail.com",
-      "password": "password12345"
-    },
-    {"member_name": "Ami",
-      "email": "amiko2k20@aol.com",
-      "password": "password12345"
-    }
-  ]
-  
+  {
+    "name": "Sally",
+    "email": "sal@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Lernan",
+    "email": "lernantino@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Ami",
+    "email": "amiko2k20@aol.com",
+    "password": "password12345"
+  }
+]

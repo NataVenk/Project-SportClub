@@ -10,7 +10,7 @@ class Member extends Model {
 
 Member.init(
     {
-      member_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: true,
       },
@@ -27,7 +27,7 @@ Member.init(
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [8],
+          len: [6],
         },
         monday: {
           type: DataTypes.BOOLEAN,
