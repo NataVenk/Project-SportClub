@@ -44,3 +44,170 @@ body {
     background-color: rgb(170, 226, 238);
     color: black;
 }
+
+:root {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-size: 50%;
+}
+
+body {
+    background-color: #252033;
+    display: block;
+    color: white;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: white;
+}
+
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: large;
+    font-weight: 200;
+}
+
+h1,h2{
+    font-size: 28px;
+    color: rgb(7, 146, 104);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 300;
+    color: rgb(252, 252, 252);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;   
+}
+
+/*containor wrap*/
+.row {
+    display: flex;
+    margin: 5% 15%;
+}
+
+.firstrow{
+   background-color: #362f49;
+   text-align: center;
+}
+
+.secondrow p {
+    margin-left: 10%;
+    font-size: larger;
+}
+
+/* Section are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+
+    header .row {
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        width: 300px;
+        flex-direction: column;
+    }
+}
+
+
+:root {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-size: 50%;
+}
+
+body {
+    background-color: #252033;
+    display: block;
+    color: white;
+    margin: 0 auto;
+}
+
+/*contact us header setting*/
+header {
+    text-align: center;
+    margin: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(7, 146, 104);
+}
+
+.container {
+    display: flex;
+    margin: 5% 30%;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+}
+
+h1,h2{
+    font-size: 28px;
+    color: rgb(7, 146, 104);
+}
+
+.form{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*map setting*/
+#map {
+    width: 500px;
+    height: 400px;
+    margin: 0 20px;
+}
+
+/*contact address and phone num,email*/
+.contact-information {
+    padding: 5% 10%;
+    display: flex;
+}
+
+/*submit button*/
+.submit {
+    padding: 2%;
+    background-color: rgb(7, 146, 104);
+    color: white;
+    border: white;
+    border-radius: 5%;
+}
+
+/*add hover on button*/
+.submit:hover {
+    background-color: #10afb4;
+    transition: 0.2s;
+}
+
+/* Section are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+    #map {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+
+    section.container,
+    section#map-placeholder {
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        width: 300px;
+        flex-direction: column;
+    }
+}

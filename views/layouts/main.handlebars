@@ -1,96 +1,104 @@
 <!DOCTYPE html>
-<html lang="en"  >
+<html lang="en">
 
 
 <head>
   <meta charset="UTF-8">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
   <title class="header">Hemplock Fitness Club</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
- <link rel="stylesheet" href="https://use.typekit.net/cxd3twe.css">
- <link rel="stylesheet" href="https://use.typekit.net/cxd3twe.css">
-
+  <link rel="stylesheet" href="https://use.typekit.net/cxd3twe.css">
+  <link rel="stylesheet" href="https://use.typekit.net/cxd3twe.css">
+    <!-- Leaflet's map api -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 
 </head>
 
 <body>
-<nav class="navbar-brand box display-flex justify-space-between">
-  <div class="navbar-brand">
-    <div class="navbar-start">
-      <a class="navbar-item">
+  <nav class="navbar-brand box display-flex justify-space-between">
+    <div class="navbar-brand">
+      <div class="navbar-start">
+        <a class="navbar-item">
           <figure class="image is-64x64">
-            <img src="/images/Pinecone Logo04.png" >
+            <img src="/images/Pinecone Logo04.png">
           </figure>
+        </a>
+
+      </div>
+
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-brand navbar-end">
+      <a class="navbar-item" href="/"> Home
       </a>
 
-    </div>
-    
+      <a class="navbar-item" href="/instrList">About Us
+      </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+      <a class="navbar-item" href="/instrList">Our Team
+      </a>
 
-  <div class="navbar-brand navbar-end">
-    <a class="navbar-item" href="/"> Home
-    </a>
+      <a class="navbar-item" href="/activlist">Our Classes
+      </a>
 
-    <a class="navbar-item" href="/instrList">Our Team
-    </a>
-
-    <a class="navbar-item"href="/activlist">Our Classes
-    </a>
-
-    <a class="navbar-item" href="/contact-us">Appointment Request
-    </a>
+      <a class="navbar-item" href="/contact-us">Contact Us
+      </a>
 
 
-    <div class="navbar-end">
+      <div class="navbar-end">
 
-      <div class="navbar-item">
-        <div class="buttons">
-          {{#if logged_in}}
-          <a href="#" class="button login" id="logoutBtn">
-            <strong>Log Out </strong>
-          </a>
-        {{else}}
-          <a href="/login" class="button login">
-            <strong>Log In </strong>
-          </a>
-        {{/if}}
+        <div class="navbar-item">
+          <div class="buttons">
+            {{#if logged_in}}
+            <a href="#" class="button login" id="logoutBtn">
+              <strong>Log Out </strong>
+            </a>
+            {{else}}
+            <a href="/login" class="button login">
+              <strong>Log In </strong>
+            </a>
+            {{/if}}
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-</nav>
- 
-    {{{body}}}
+  </nav>
+
+  {{{body}}}
 
 
-<footer class="footer">
-  <div class="content has-text-centered"> 
+  <footer class="footer">
+    <div class="content has-text-centered">
 
-  <p> Copywrite Team2</p>
-  <div class="contact-information">
+      <p> Copywrite Team2</p>
+      <div class="contact-information">
         <p>99 Ave, Philadelphia, PA 19191</p>
         <p>Call us at: 1 115-309-9999</p>
         <p>Email us at: contactus@contactus.com</p>
         <i id="home-icon" class="fa fa-home"></i>
 
-</div>
-</footer>
+      </div>
+  </footer>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>
-{{!-- <script src="angular.js"></script> --}}
+{{!--
+<script src="angular.js"></script> --}}
 
 </html>
