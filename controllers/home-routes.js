@@ -1,25 +1,31 @@
 const router = require('express').Router();
-const { Instructor, Activity } = require('../models');
-
+const { Instructor, Activity, MemberActivity, Member } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/test', (req, res) => {
-    res.send('working');
+    res.send('working',
+    {logged_in: req.session.logged_in});
 })
 
 //routing to homepage
 router.get ('/', async (req,res)=> {
-    res.render('index');
+    res.render('index', {
+        logged_in: req.session.logged_in
+    });
 })
 
 //routing to About us
 router.get('/aboutus', (req, res) => {
-    res.render('page2-aboutus');
+    res.render('page2-aboutus', {
+        logged_in: req.session.logged_in
+    });
 });
 
 
 //routing to contact us page
 router.get('/contact-us', (req, res) => {
-    res.render('page5-contactus');
+    res.render('page5-contactus',
+    {logged_in: req.session.logged_in});
 })
 
 //routing to instructors
@@ -29,7 +35,8 @@ router.get('/instrList', async (req, res) => {
     })
     const instructors = instructorResults.map(value => value.get({ plain: true }))
     return res.render('instrList', {
-        instructors: instructors
+        instructors: instructors,
+        logged_in: req.session.logged_in
     });
 
 });
@@ -41,12 +48,39 @@ include: "instructor"
     const activities = activityResults.map(value => value.get({ plain: true }))
     console.log(activities)
     return res.render('activity', {
-        activities
+        activities,
+        logged_in: req.session.logged_in
     });
 
 });
+
+router.get('/youractivity', withAuth, async (req, res) => {
+    try {
+      // Find the logged in user based on the session ID
+      const memberData = await Member.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: {model:Activity, through: MemberActivity},
+      });
+      console.log("============")
+    
+
+      const user = memberData.get({ plain: true });
+  console.log(user)
+      res.render('youractivity', {
+        ...user,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 //routing to login/signup page
 router.get('/login', (req, res) => {
+    console.log("AM I LOGGED IN??", req.session.logged_in)
+    if(req.session.logged_in){
+        res.redirect('/')
+        return
+    }
     res.render('login');
 });
 
