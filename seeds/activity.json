@@ -9,7 +9,6 @@
         "day4": true,
         "day5": true
     },
-
     {
         "activity_name": "Yoga",
         "description": "Relax, concentrate and Stretch",
@@ -20,7 +19,6 @@
         "day4": false,
         "day5": true
     },
-
     {
         "activity_name": "Cross Fit",
         "description": "A mix of everything",
@@ -31,7 +29,6 @@
         "day4": true,
         "day5": true
     },
-
     {
         "activity_name": "Cardio",
         "description": "A mix of everything",
@@ -42,7 +39,6 @@
         "day4": false,
         "day5": true
     },
-
     {
         "activity_name": "Swimming",
         "description": "A pool party",
@@ -53,7 +49,4 @@
         "day4": false,
         "day5": true
     }
-
-
-
 ]

@@ -38,7 +38,6 @@ router.get('/instrList', async (req, res) => {
         instructors: instructors,
         logged_in: req.session.logged_in
     });
-
 });
 //routing to all activities
 router.get('/activlist', async (req, res) => {
@@ -51,7 +50,6 @@ include: "instructor"
         activities,
         logged_in: req.session.logged_in
     });
-
 });
 
 router.get('/youractivity', withAuth, async (req, res) => {
