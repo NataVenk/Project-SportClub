@@ -26,9 +26,9 @@ const loginForm = async (event) => {
 };
 
 const signupForm = async (event) => {
-  console.log('Inside signupForm', "hello");
+ 
   event.preventDefault();
-
+  console.log('Inside signupForm', "hello");
   const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
@@ -46,7 +46,7 @@ const signupForm = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the user activity page
-      document.location.replace('/youractivity');
+      document.location.replace('/member-interest');
     } else {
       alert('Failed to sign up.');
     };

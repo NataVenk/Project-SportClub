@@ -24,8 +24,8 @@ router.get('/about-us', (req, res) => {
 
 //routing to contact us page
 router.get('/contact-us', (req, res) => {
-    res.render('page5-contactus',
-    {logged_in: req.session.logged_in});
+    res.render('page5-contactus',{
+        logged_in: req.session.logged_in});
 })
 
 //routing to instructors
@@ -51,7 +51,7 @@ include: "instructor"
         logged_in: req.session.logged_in
     });
 });
-
+//routing to existing member activity
 router.get('/youractivity', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
@@ -72,6 +72,51 @@ router.get('/youractivity', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
+//routing to member interest selection page
+
+  router.get('/member-interest', withAuth, async (req, res) => {
+  
+try {
+    // Find the logged in user based on the session ID
+    const memberData = await Member.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: {model:Activity, through: MemberActivity},
+    });
+    console.log("============")
+  
+
+    const user = memberData.get({ plain: true });
+console.log(user)
+    res.render('member-interest', {
+      ...user,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+ 
+
+// router.get('/member-interest', withAuth, async (req, res) => {
+//     try {
+// const memberfav = activityResults.map(value => value.get({ plain: true }))
+
+//       const memberData = await Member.findByPk(req.session.user_id, {
+//         attributes: { exclude: ['password'] },
+//         include: {model:Activity, through: MemberActivity},
+//       });
+
+
+// router.get('/memberlist', (req, res) => {
+//         Member.find({ include: { model: Activity, through: MemberActivity } })
+//           .then(members => {
+//             res.json(members)
+//           })
+//       });
+
+
 //routing to login/signup page
 router.get('/login', (req, res) => {
     console.log("AM I LOGGED IN??", req.session.logged_in)
