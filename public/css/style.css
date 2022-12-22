@@ -186,6 +186,7 @@ h1,h2{
     color: white;
     border: white;
     border-radius: 5%;
+    font-size: 20px;
 }
 
 /*add hover on button*/
@@ -193,6 +194,16 @@ h1,h2{
     background-color: #10afb4;
     transition: 0.2s;
 }
+
+.content-box p{
+    padding: 24px 0 10px;
+        color: rgb(141, 136, 136);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        box-sizing: border-box;
+        text-align: left;
+    }
 
 /* Section are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
