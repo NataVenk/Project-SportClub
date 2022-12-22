@@ -9,26 +9,26 @@ router.get('/activity', async (req, res) => {
 
 
 
-router.post('/member-interest', async (req, res) => {
-  try {
-    const memberFav = await MemberActivity.create({
-      activity_id: req.body.activity_id,
-      activity_name: req.body.activity_name,
-      description: req.body.description,
-      instructor_id: req.body.instructor,
-      day1: req.body.day1
-    });
+// router.post('/member-interest', async (req, res) => {
+//   try {
+//     const memberFav = await MemberActivity.create({
+//       activity_id: req.body.activity_id,
+//       activity_name: req.body.activity_name,
+//       description: req.body.description,
+//       instructor_id: req.body.instructor,
+//       day1: req.body.day1
+//     });
 
-    req.session.save(() => {
-      req.session.loggedIn = true;
+//     req.session.save(() => {
+//       req.session.loggedIn = true;
 
-      res.status(200).json(memberFav);
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//       res.status(200).json(memberFav);
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 //get one class
 
 
