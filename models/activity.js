@@ -17,6 +17,11 @@ Activity.init(
     instructor_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'instructor',
+        key: 'id',
+        unique: false,
+      },
     },
     day1: {
       type: DataTypes.BOOLEAN,

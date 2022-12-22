@@ -19,5 +19,9 @@ Activity.belongsTo(Instructor, {
     foreignKey: 'instructor_id'
   });
 
+Instructor.hasOne(Activity, {
+  foreignKey: 'instructor_id'
+});
+
 
 module.exports = {Member, Activity, Instructor, MemberActivity};

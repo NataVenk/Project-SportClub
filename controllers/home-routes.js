@@ -51,27 +51,53 @@ include: "instructor"
         logged_in: req.session.logged_in
     });
 });
+
 //routing to existing member activity
 router.get('/youractivity', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const memberData = await Member.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: {model:Activity, through: MemberActivity},
+        include: [
+          {
+            model: Activity,
+            through: MemberActivity, 
+          }
+        ],
       });
       console.log("============")
     
-
       const user = memberData.get({ plain: true });
-  console.log(user)
+      console.log(JSON.stringify(user, null, 2))
       res.render('youractivity', {
-        ...user,
-        logged_in: req.session.logged_in
+        user,
+        logged_in: true
       });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   });
+
+//   // Use withAuth middleware to prevent access to route
+// router.get('/youractivity', withAuth, async (req, res) => {
+//   try {
+//     // Find the logged in user based on the session ID
+//     const memberData = await MemberActivity.findByPk(req.session.user_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: Project }],
+//     });
+
+//     const user = userData.get({ plain: true });
+
+//     res.render('profile', {
+//       ...user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 
 //routing to member interest selection page

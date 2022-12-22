@@ -9,14 +9,22 @@ MemberActivity.init(
     activity_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'activity',
+        key: 'id',
+        unique: false,
+      },
     },
     member_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
+      references: {
+        model: 'member',
+        key: 'id',
+        unique: false,
+      },
     },
   
-   
-    
   },
   {
     sequelize,
