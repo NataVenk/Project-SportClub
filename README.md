@@ -7,11 +7,7 @@ This application serves as the homepage for the fictional Hemlock Fitness and Tr
 
 As a class project this assignment served as a chance to exercise our newly learned back-end development skills with Node.js, Object-Oriented Programming, Express.js, MySQL, Object-Relational Mapping (ORM), and the Model-View-Controller paradigm in tandem with our previously learned front-end skills in HTML, CSS, JavaScript, and API technologies. This exercise occurred in a collaborative group environment where each member had to handle different aspects of a complex project in order to put together a complete, functional end product by a set deadline.
 
-## Table of Contents (Optional)
-
-[HEY MATT! maybe?]
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 
@@ -53,17 +49,23 @@ This screenshot captures the application's homepage. From here the user can navi
 
 ![Hemlock Fitness Home Page](/public/images/readme/hemlock-home.png)
 
+### Log In Page
 
+The Log In page allows a user with an existing account to log in to their account and also provides a sign up section for new users to create their account.
 
-Provide instructions and examples for use. Include screenshots as needed.
+![Hemlock Fitness Log In Page](/public/images/readme/hemlock-login.png)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+### User Dashboard
 
-```md
+Once logged in, users can select one or more activities that they are interested in and add them to their schedule.
 
-![alt text](assets/images/screenshot.png)
+![Hemlock Fitness User Dashboard](/public/images/readme/hemlock-user-dashboard.png)
 
-```
+### User Schedule
+
+Once a user has selected activities that they are interested in and submitted the form, a list of their selected activities is provided to them. From this dashboard the user can return to the prior form and edit their activities of interest as needed.
+
+![Hemlock Fitness User Schedule](/public/images/readme/hemlock-my-schedule.png)
 
 ## Technologies Used
 
