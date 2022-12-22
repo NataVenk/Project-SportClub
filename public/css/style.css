@@ -1,3 +1,4 @@
+@import url(https://font.googleapis.com/css?family=Source+Code+Pro:400,900);
 * {
     box-sizing: border-box;
     padding: 0;
@@ -144,29 +145,36 @@ body {
 
 /*page 3 our team*/
 .instructor-card {
+    display: flex;
     background-image: url(../images/group1.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    width: 400px;
+    height: 400px;
+    justify-content:space-between;
 }
 
 /*page 4 our class styling*/
 .class-card {
-    margin: 20px;
-    flex: 0 1 300px;
-    padding: 5px;
-    width: 20%;
-    height: 200px;
-    border: 3px solid;
-    border-style: solid;
-    border-width: medium;
-    background-color: rgb(168, 91, 28);
+    display:block;
+    margin: 70px auto;
+    width:45%;
     color: black;
+    text-align: center;
+}
+.class-card-header{
     background-image: url(../images/group1.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  flex-direction: row;
+  background-size:contain;
 }
-
+.card-name{
+    font-family:nasalization, sans-serif;
+    margin: 1%;
+    color:rgb(7, 146, 104);
+}
+.card-dis{
+    font-family:nasalization, sans-serif;
+    color: rgb(22, 21, 20);
+}
 
 
 /*page 5 contact us page setting*/
@@ -189,7 +197,6 @@ body {
     padding: 0;
     flex-direction: column;
     text-align: center;
-
 }
 
 /*map setting*/
