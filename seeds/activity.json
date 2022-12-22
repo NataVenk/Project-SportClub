@@ -1,7 +1,7 @@
 [
     {
         "activity_name": "Strength Fitness",
-        "description": "Set of exercises to strenghen your core",
+        "description": "Improve mobility and function",
         "instructor_id": 1,
         "day1": false,
         "day2": true,
@@ -11,7 +11,7 @@
     },
     {
         "activity_name": "Yoga",
-        "description": "Relax, concentrate and Stretch",
+        "description": "Mind and body postural meditation",
         "instructor_id": 2,
         "day1": false,
         "day2": true,
@@ -21,7 +21,7 @@
     },
     {
         "activity_name": "Cross Fit",
-        "description": "A mix of everything",
+        "description": "A form of high intensity interval training",
         "instructor_id": 3,
         "day1": true,
         "day2": true,
@@ -31,7 +31,7 @@
     },
     {
         "activity_name": "Cardio",
-        "description": "A mix of everything",
+        "description": "An activty to elevate your heart rate",
         "instructor_id": 4,
         "day1": true,
         "day2": false,
@@ -41,7 +41,7 @@
     },
     {
         "activity_name": "Swimming",
-        "description": "A pool party",
+        "description": "An exercise to develop your whole body",
         "instructor_id": 5,
         "day1": true,
         "day2": false,
