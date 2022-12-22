@@ -1,3 +1,4 @@
+@import url(https://font.googleapis.com/css?family=Source+Code+Pro:400,900);
 * {
     box-sizing: border-box;
     padding: 0;
@@ -36,82 +37,60 @@ body {
     }
 }
 
+/*navbar setting with log in button*/
+.navbar-item {
+    font-family: nasalization, sans-serif;
+    color: rgb(7, 146, 104);
+    font-weight: 600;
+    font-size: larger;
+}
+
+.login {
+    background-color: rgb(7, 146, 104);
+    color: aliceblue;
+}
+
+.profile-picture {
+    margin: 0
+}
+
+/*footer styling*/
+.content-box p {
+    padding: 24px 0 10px;
+    color: rgb(141, 136, 136);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/*home page "hemlock fitness center" styling*/
 .logo-center {
     font-family: nasalization, sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 80px;
-    color: rgb(201, 238, 247);
+    color: rgb(138, 230, 202);
     position: absolute;
-    bottom: 100px;
-    left: 10px;
+    bottom: 300px;
+    left: 80px;
 }
 
 .header {
     font-family: nasalization, sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 10%;
 }
 
-
-.class-card {
-    margin: 20px;
-    flex: 0 1 300px;
-    padding: 5px;
-    width: 25%;
-    border: 3px solid;
-    border-style: solid;
-    border-width: medium;
-    background-color: rgb(170, 226, 238);
-    color: black;
-}
-
-header {
-    text-align: center;
-    margin: 5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
-}
-
-p {
-    font-family: nasalization, sans-serif;
-    text-align: center;
-    font-size: large;
-    font-weight: 200;
-}
-
-h1,
-h2 {
-    font-size: 28px;
-    color: rgb(7, 146, 104);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-}
-
-h3 {
-    font-size: 28px;
-    font-weight: 300;
-    color: rgb(252, 252, 252);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-}
-
-h6 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contact-us-p {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/*container wrap*/
-.row {
+/*page 2 about-us page styling with media query*/
+.row1 {
     display: flex;
     margin: 5% 15%;
+    background-image: linear-gradient(rgba(250, 244, 244, 0.5),
+            rgba(255, 255, 255, 0.5)), url(../images/blurred-background.jpg);
+    background-size: cover;
 }
 
 .firstrow {
@@ -119,13 +98,40 @@ h6 {
     text-align: center;
 }
 
+.firstrow h1 {
+    color: rgb(7, 146, 104);
+    font-family: nasalization, sans-serif;
+    font-size: x-large;
+}
+
+.firstrow h2 {
+    color: rgb(7, 146, 104);
+    font-family: nasalization, sans-serif;
+    font-size: x-large;
+}
+
+.secondrow h3 {
+    text-align: center;
+}
+
 .secondrow p {
     margin-left: 10%;
     font-size: larger;
-    background-image: url(../images/meadow.jpg);;
+    color: #252033;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin: 50px 40px;
+    font-weight: 400;
 }
 
-/* Section are stacked on top of each other at 768px or smaller */
+.secondrow h3 {
+    font-size: 50px;
+    color: #252033;
+    font-family: nasalization, sans-serif;
+    margin: 50px 40px;
+    font-weight: 400;
+}
+
 @media screen and (max-width: 768px) {
 
     header .row {
@@ -137,81 +143,91 @@ h6 {
     }
 }
 
+/*page 3 our team*/
+.instructor-card {
+    display:inline-block;
+    background-image: url(../images/group6.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 600px;
+    height: 400px;
+margin:1% auto;
+    flex-direction: row;
+    text-align: center;
+}
+.instructor-card-header{
+    font-family:nasalization, sans-serif;
+    margin: 10%;
+    font-weight: 700;
+    color:white;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #e2b318;
+} 
+.card-body{
+    font-family:nasalization, sans-serif;
+    margin: 10% 20%;  
+    text-align:center;
+    color: white;
+    font-size:40px;
+}
 
-/*contact us header setting*/
-header {
+
+
+
+
+/*page 4 our class styling*/
+.class-card {
+    display:block;
+    margin: 70px auto;
+    width:45%;
+    color: black;
+    text-align: center;
+}
+.class-card-header{
+    background-image: url(../images/group1.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+.card-name{
+    font-family:nasalization, sans-serif;
+    margin: 1%;
+    color:rgb(7, 146, 104);
+}
+.card-dis{
+    font-family:nasalization, sans-serif;
+    color: rgb(22, 21, 20);
+}
+
+
+/*page 5 contact us page setting*/
+.contactus {
     text-align: center;
     margin: 5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: nasalization, sans-serif;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(7, 146, 104);
+    background-image: url(../images/gymMain.png);
+    background-repeat: no-repeat;
 }
-
-.container {
+.contactus-header {
+    font-family: nasalization, sans-serif;
+}
+.contact-us {
     display: flex;
-    margin: 5% 30%;
-    flex-wrap: wrap;
+    margin: 0;
     padding: 0;
-}
-
-
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    justify-content: center;
-}
-
-h1,
-h2 {
-    font-size: 28px;
-    color: rgb(7, 146, 104);
-}
-
-.form {
-    margin: 0%;
-    padding: 0%;
+    flex-direction: column;
+    text-align: center;
 }
 
 /*map setting*/
 #map {
-    width: 500px;
-    height: 400px;
+    width: 1850px;
+    height: 500px;
     margin: 0 20px;
 }
 
-/*contact address and phone num,email*/
-.contact-information {
-    padding: 5% 10%;
-    display: flex;
-}
-
-/*submit button*/
-.submit {
-    padding: 2%;
-    background-color: rgb(7, 146, 104);
-    color: white;
-    border: white;
-    border-radius: 5%;
-    font-size: 20px;
-}
-
-/*add hover on button*/
-.submit:hover {
-    background-color: #10afb4;
-    transition: 0.2s;
-}
-
-.content-box p {
-    padding: 24px 0 10px;
-    color: rgb(141, 136, 136);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-/* Section are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
     #map {
         width: 300px;
@@ -219,7 +235,7 @@ h2 {
         text-align: center;
     }
 
-    section.container,
+    section.container1,
     section#map-placeholder {
         position: relative;
         display: flex;
@@ -227,13 +243,73 @@ h2 {
         width: 300px;
         flex-direction: column;
     }
+}
 
+/*log in page setting*/
+.level-item {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    line-height: 110%;
+    justify-content: space-around;
+    background-image: url(../images/weights.jpg);
+    background-repeat: no-repeat;
+    font-family: nasalization, sans-serif;
 
 }
 
-.instructor-card {
-    background-image: url(../images/group1.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
+/* log in btn setting*/
+.btn-primary{
+    display:inline-flex;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid rgb(7, 146, 104);
+    color: rgb(7, 146, 104);
+    background: 0 0;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 18px;
+    height: 45px;
+    font-family: nasalization, sans-serif;
+    text-align: center;
+}
+.btn-primary:hover {
+    background-color: #0b9b83;
+    color: #fff;
 }
 
+/*after log in page styling*/
+.interest-form {
+    margin-left: 45%;
+}
+
+.col-md-6 h3 {
+    color: #252033;
+}
+
+#updateactivityBtn {
+    display: inline-table;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid rgb(7, 146, 104);
+    color: rgb(7, 146, 104);
+    background: 0 0;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 18px;
+    height: 50px;
+    font-family: nasalization, sans-serif;
+    margin: 30px 850px;
+}
+
+/*after submit return page*/
+.col-auto {
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
