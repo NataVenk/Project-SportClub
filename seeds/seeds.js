@@ -9,7 +9,7 @@ const memberActivities = require('./member-activity.json')
 //const userData = require('./userData.json');
 //const projectData = require('./projectData.json');
 
-const seedDatabase = async () => {
+const seedDatabase = async (cb) => {
   await sequelize.sync({ force: true });
   console.log('====================seeding data==================')
 
@@ -42,7 +42,8 @@ const seedDatabase = async () => {
     });
   } */
 
-  process.exit(0);
+  // process.exit(0);
+  cb();
 };
 
 seedDatabase();
