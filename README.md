@@ -41,6 +41,8 @@ Please note that MySQL must be installed in order to run the application via ter
 
 Once the above commands have been entered and MySQL is installed the application can be viewed through [this link](http://localhost:6505/).
 
+Alternatively and more simply, the app can also be viewed in [Heroku](https://hemlock-fit-club.herokuapp.com/).
+
 ## Usage
 
 ### Home Page
