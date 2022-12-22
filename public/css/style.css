@@ -217,5 +217,13 @@ h2 {
         width: 300px;
         flex-direction: column;
     }
+
+
+}
+
+.instructor-card {
+    background-image: url(../images/group1.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
