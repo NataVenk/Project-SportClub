@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seeds": "node seeds/seeds.js"
+    "seeds": "node seeds/index.js"
   },
   "name": "project-sportclub",
   "description": "Updates to come.",
