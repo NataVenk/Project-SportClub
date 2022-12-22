@@ -105,6 +105,18 @@ h3 {
 }
 
 /* about us page containor wrap*/
+h6 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-us-p {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+}
+
+/*container wrap*/
 .row {
     display: flex;
     margin: 5% 15%;
@@ -235,5 +247,11 @@ h2 {
         width: 300px;
         flex-direction: column;
     }
+}
+
+.instructor-card {
+    background-image: url(../images/group1.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 
