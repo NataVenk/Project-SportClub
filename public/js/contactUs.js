@@ -4,9 +4,9 @@ var customerSubmitForm = document.querySelector('.customer-submit');
 
 console.log(customerSubmitForm);
 
-var map = L.map('map').setView([39.9382, -75.1723],13);
+var map = L.map('map').setView([39.938161, -75.172099],13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-var marker = L.marker([39.9382, -75.1723]).addTo(map);
+var marker = L.marker([39.938161, -75.172099]).addTo(map);
