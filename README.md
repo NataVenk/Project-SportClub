@@ -47,7 +47,13 @@ Once the above commands have been entered and MySQL is installed the application
 
 ## Usage
 
-[pending a run through the final launch product]
+### Home Page
+
+This screenshot captures the application's homepage. From here the user can navigate to any area of the site using the links in navigation header. The About Us, Our Team, and Our Classes links all send the user to self explanatory pages that contain static information on each subject. The Contact Us link integrates the Leaflet.js map to allow the user to see where Hemlock is located as well as how to get in touch.
+
+![Hemlock Fitness Home Page](/public/images/readme/hemlock-home.png)
+
+
 
 Provide instructions and examples for use. Include screenshots as needed.
 
