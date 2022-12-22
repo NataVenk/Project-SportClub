@@ -41,11 +41,9 @@ node server
 
 ```
 
-Please note that MySQL must be installed in order to run the application via terminal. For instructions on how to
+Please note that MySQL must be installed in order to run the application via terminal. For instructions on how to install MySQL on your system, please refer to this [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide).
 
-install MySQL on your system, please refer to this [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide).
-
-Once the above commands have been entered the application can be viewed through [this link](http://localhost:6505/).
+Once the above commands have been entered and MySQL is installed the application can be viewed through [this link](http://localhost:6505/).
 
 ## Usage
 
@@ -70,6 +68,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - [Bulma](https://bulma.io/)
 
 - JavaScript
+
+- RESTful APIs
 
 - [Leaflet.js](https://leafletjs.com/)
 
