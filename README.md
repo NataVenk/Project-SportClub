@@ -44,6 +44,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
  ```
 
 ## Technologies Used
+
 - HTML
 - CSS
 - [Bulma](https://bulma.io/)
@@ -58,7 +59,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 - [Alejandro Asencio](https://github.com/z20axa)
 - [Muchir Bickel](https://github.com/muchirbickel)
 - [Matt Goldsmith](https://github.com/chocochip287)
-- Paul Hagan
+- [Paul Hagan](https://github.com/phagn131)
 
 ## License
 
