@@ -1,4 +1,5 @@
 @import url(https://font.googleapis.com/css?family=Source+Code+Pro:400,900);
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -145,56 +146,57 @@ body {
 
 /*page 3 our team*/
 .instructor-card {
-    display:inline-block;
+    display: inline-block;
     background-image: url(../images/group6.jpg);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     width: 600px;
     height: 400px;
-margin:1% auto;
+    margin: 1% auto;
     flex-direction: row;
     text-align: center;
 }
-.instructor-card-header{
-    font-family:nasalization, sans-serif;
+
+.instructor-card-header {
+    font-family: nasalization, sans-serif;
     margin: 10%;
     font-weight: 700;
-    color:white;
+    color: white;
     font-size: 50px;
     text-shadow: 1px 1px 2px #e2b318;
-} 
-.card-body{
-    font-family:nasalization, sans-serif;
-    margin: 10% 20%;  
-    text-align:center;
-    color: white;
-    font-size:40px;
 }
 
-
-
-
+.card-body {
+    font-family: nasalization, sans-serif;
+    margin: 10% 20%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
 
 /*page 4 our class styling*/
 .class-card {
-    display:block;
+    display: block;
     margin: 70px auto;
-    width:45%;
+    width: 45%;
     color: black;
     text-align: center;
 }
-.class-card-header{
+
+.class-card-header {
     background-image: url(../images/group1.jpg);
-  background-repeat: no-repeat;
-  background-size:contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-.card-name{
-    font-family:nasalization, sans-serif;
+
+.card-name {
+    font-family: nasalization, sans-serif;
     margin: 1%;
-    color:rgb(7, 146, 104);
+    color: rgb(7, 146, 104);
 }
-.card-dis{
-    font-family:nasalization, sans-serif;
+
+.card-dis {
+    font-family: nasalization, sans-serif;
     color: rgb(22, 21, 20);
 }
 
@@ -210,9 +212,11 @@ margin:1% auto;
     background-image: url(../images/gymMain.png);
     background-repeat: no-repeat;
 }
+
 .contactus-header {
     font-family: nasalization, sans-serif;
 }
+
 .contact-us {
     display: flex;
     margin: 0;
@@ -259,8 +263,8 @@ margin:1% auto;
 }
 
 /* log in btn setting*/
-.btn-primary{
-    display:inline-flex;
+.btn-primary {
+    display: inline-flex;
     outline: 0;
     cursor: pointer;
     border-radius: 6px;
@@ -275,6 +279,7 @@ margin:1% auto;
     font-family: nasalization, sans-serif;
     text-align: center;
 }
+
 .btn-primary:hover {
     background-color: #0b9b83;
     color: #fff;
@@ -289,20 +294,44 @@ margin:1% auto;
     color: #252033;
 }
 
+#memberactivitiesH2El {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+#memberactivitiesDivEl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#updateactivityBtnDivEl {
+    display: flex;
+    justify-content: center;
+}
+
+/* update actibity btn setting*/
 #updateactivityBtn {
-    display: inline-table;
+    display: flex;
     outline: 0;
     cursor: pointer;
     border-radius: 6px;
     border: 2px solid rgb(7, 146, 104);
     color: rgb(7, 146, 104);
     background: 0 0;
+    padding: 8px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
     font-weight: 800;
     font-size: 18px;
-    height: 50px;
+    height: 45px;
     font-family: nasalization, sans-serif;
-    margin: 30px 850px;
+    text-align: center;
+}
+
+#updateactivityBtn:hover {
+    background-color: #0b9b83;
+    color: #fff;
 }
 
 /*after submit return page*/
