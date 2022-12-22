@@ -25,5 +25,4 @@ const interestForm = async (event) => {
   };
 
 
-
 document.querySelector(".interest-form").addEventListener("submit", interestForm)

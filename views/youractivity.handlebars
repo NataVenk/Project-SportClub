@@ -1,12 +1,17 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Personalized schedule for {{name}}!</h2>
+    <h2>Personalized schedule for {{user.name}}!</h2>
+    {{#each user.activities as |activity|}}
+    {{activity.activity_name}}
+    {{activity.description}}
+    {{activity.instructor_id}}
+    {{/each}}
   </div>
 </div>
-<div class="class-card box block is-medium">
-  <div class="class-card-header">
-    {{activity_name}}
-  </div>
+{{!-- <div class="class-card box block is-medium">
+  <div class="class-card-header"> --}}
+
+    {{!-- </div>
   <div class="class-card box block is-medium">
     <div class="class-card-header">
       {{day1}}
@@ -14,13 +19,12 @@
       {{day3}}
       {{day4}}
       {{day5}}
-    </div>
+    </div> --}}
 
-
-    <div class="form-group">
+    {{!-- <div class="form-group">
       <a href="/member-interest">
-        <button class="btn btn-primary" type="submit" href="/member-interest" >Update your activity</button>
+        <button class="btn btn-primary" type="submit">Update your activity</button>
       </a>
-    </div>
+    </div> --}}
 
-   
+    <a href="/member-interest" class="button" type="submit" id="updateactivityBtn">Update your activity</a>
