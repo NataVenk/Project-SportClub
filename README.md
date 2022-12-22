@@ -3,7 +3,7 @@
 
 ## Description
 
-This application serves as the homepage for the fictional Hemlock Fitness and Training Center - a long-standing Pennsylvania fitness facility that borrows its name from the state tree, the [Eastern Hemlock](https://en.wikipedia.org/wiki/Tsuga_canadensis). Its primary aim is to offer insight for prospective customers into its staff, location, and facilities. As an established business in a highly competitive market it is vital to ensure that the business remains visible and accessible for both existing and prospective customers.
+This application serves as the homepage for the fictional Hemlock Fitness and Training Center - a long-standing Philadelphia fitness facility that borrows its name from the state tree of Pennsylvania, the [Eastern Hemlock](https://en.wikipedia.org/wiki/Tsuga_canadensis). Its primary aim is to offer insight for prospective customers into its staff, location, and facilities. As an established business in a highly competitive market, it is vital to have an online presence in order to ensure that the business remains visible and accessible for both existing and potential new customers.
 
 As a class project this assignment served as a chance to exercise our newly learned back-end development skills with Node.js, Object-Oriented Programming, Express.js, MySQL, Object-Relational Mapping (ORM), and the Model-View-Controller paradigm in tandem with our previously learned front-end skills in HTML, CSS, JavaScript, and API technologies. This exercise occurred in a collaborative group environment where each member had to handle different aspects of a complex project in order to put together a complete, functional end product by a set deadline.
 
@@ -45,7 +45,7 @@ Once the above commands have been entered and MySQL is installed the application
 
 ### Home Page
 
-This screenshot captures the application's homepage. From here the user can navigate to any area of the site using the links in navigation header. The About Us, Our Team, and Our Classes links all send the user to self explanatory pages that contain static information on each subject. The Contact Us link integrates the Leaflet.js map to allow the user to see where Hemlock is located as well as how to get in touch.
+The below screenshot captures the application's homepage. From here the user can navigate to any area of the site using the links in navigation header. The About Us, Our Team, and Our Classes links all send the user to self explanatory pages that contain static information on each subject. The Contact Us link integrates the Leaflet.js map to allow the user to see where Hemlock is located as well as how to get in touch.
 
 ![Hemlock Fitness Home Page](/public/images/readme/hemlock-home.png)
 
