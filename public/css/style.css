@@ -145,13 +145,35 @@ body {
 
 /*page 3 our team*/
 .instructor-card {
-    display: flex;
-    background-image: url(../images/group1.jpg);
+    display:inline-block;
+    background-image: url(../images/group6.jpg);
     background-repeat: no-repeat;
-    width: 400px;
+    background-size:contain;
+    width: 600px;
     height: 400px;
-    justify-content:space-between;
+margin:1% auto;
+    flex-direction: row;
+    text-align: center;
 }
+.instructor-card-header{
+    font-family:nasalization, sans-serif;
+    margin: 10%;
+    font-weight: 700;
+    color:white;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #e2b318;
+} 
+.card-body{
+    font-family:nasalization, sans-serif;
+    margin: 10% 20%;  
+    text-align:center;
+    color: white;
+    font-size:40px;
+}
+
+
+
+
 
 /*page 4 our class styling*/
 .class-card {
