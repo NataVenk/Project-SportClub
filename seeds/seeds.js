@@ -46,4 +46,4 @@ const seedDatabase = async (cb) => {
   cb();
 };
 
-seedDatabase();
+module.exports=seedDatabase;
