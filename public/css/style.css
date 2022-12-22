@@ -5,33 +5,54 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #252033;
+    display: block;
+    color: white;
+    margin: 0 auto;
+}
+
+/*HEMLOCK LOGO setting with media query*/
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 11pt;
+    left: 40pt;
+}
+
+.logo {
+    flex: 0 0 50%;
+}
+
+@media (min-width: 700px) {
+    .logo {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .logo {
+        flex: 0 0 25%;
+    }
+}
+
+.logo-center {
+    font-family: nasalization, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 80px;
+    color: rgb(201, 238, 247);
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
 }
 
 .header {
     font-family: nasalization, sans-serif;
-
-    font-weight: 400;
-
-    font-style: normal;
-}
-
-.main-image {
-
-    text-align: center;
-
-}
-
-
-.logo-center {
-    font-family: nasalization, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 65px;
-    color: rgb(170, 226, 238);
-    position: absolute;
-    bottom: 300px;
 }
+
 
 .class-card {
     margin: 20px;
@@ -45,20 +66,6 @@ body {
     color: black;
 }
 
-:root {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    background-size: 50%;
-}
-
-body {
-    background-color: #252033;
-    display: block;
-    color: white;
-    margin: 0 auto;
-}
-
 header {
     text-align: center;
     margin: 5%;
@@ -69,41 +76,53 @@ header {
 }
 
 p {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: nasalization, sans-serif;
     text-align: center;
     font-size: large;
     font-weight: 200;
 }
 
-h1,h2{
+h1,
+h2 {
     font-size: 28px;
     color: rgb(7, 146, 104);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-h3{
+h3 {
     font-size: 28px;
     font-weight: 300;
     color: rgb(252, 252, 252);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;   
+    text-align: center;
 }
 
-/*containor wrap*/
+h6 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-us-p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*container wrap*/
 .row {
     display: flex;
     margin: 5% 15%;
 }
 
-.firstrow{
-   background-color: #362f49;
-   text-align: center;
+.firstrow {
+    background-color: #362f49;
+    text-align: center;
 }
 
 .secondrow p {
     margin-left: 10%;
     font-size: larger;
+    background-image: url(../images/meadow.jpg);;
 }
 
 /* Section are stacked on top of each other at 768px or smaller */
@@ -118,20 +137,6 @@ h3{
     }
 }
 
-
-:root {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    background-size: 50%;
-}
-
-body {
-    background-color: #252033;
-    display: block;
-    color: white;
-    margin: 0 auto;
-}
 
 /*contact us header setting*/
 header {
@@ -156,12 +161,13 @@ p {
     justify-content: center;
 }
 
-h1,h2{
+h1,
+h2 {
     font-size: 28px;
     color: rgb(7, 146, 104);
 }
 
-.form{
+.form {
     margin: 0%;
     padding: 0%;
 }
@@ -195,15 +201,15 @@ h1,h2{
     transition: 0.2s;
 }
 
-.content-box p{
+.content-box p {
     padding: 24px 0 10px;
-        color: rgb(141, 136, 136);
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 13px;
-        font-style: normal;
-        box-sizing: border-box;
-        text-align: left;
-    }
+    color: rgb(141, 136, 136);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    box-sizing: border-box;
+    text-align: left;
+}
 
 /* Section are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
@@ -221,4 +227,13 @@ h1,h2{
         width: 300px;
         flex-direction: column;
     }
+
+
 }
+
+.instructor-card {
+    background-image: url(../images/group1.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
