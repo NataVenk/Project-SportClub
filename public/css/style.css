@@ -142,41 +142,54 @@ body {
     }
 }
 
-/* page 3  our team*/
-.class-card {
-    margin: 20px;
-    flex: 0 1 300px;
-    padding: 5px;
-    width: 25%;
-    border: 3px solid;
-    border-style: solid;
-    border-width: medium;
-    background-color: rgb(170, 226, 238);
-    color: black;
-}
-
+/*page 3 our team*/
 .instructor-card {
     background-image: url(../images/group1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
+/*page 4 our class styling*/
+.class-card {
+    margin: 20px;
+    flex: 0 1 300px;
+    padding: 5px;
+    width: 20%;
+    height: 200px;
+    border: 3px solid;
+    border-style: solid;
+    border-width: medium;
+    background-color: rgb(168, 91, 28);
+    color: black;
+    background-image: url(../images/group1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: row;
+}
+
+
+
 /*page 5 contact us page setting*/
 .contactus {
     text-align: center;
     margin: 5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: nasalization, sans-serif;
     font-weight: 500;
     font-size: 40px;
     color: rgb(7, 146, 104);
+    background-image: url(../images/gymMain.png);
+    background-repeat: no-repeat;
 }
-
+.contactus-header {
+    font-family: nasalization, sans-serif;
+}
 .contact-us {
     display: flex;
     margin: 0;
     padding: 0;
     flex-direction: column;
     text-align: center;
+
 }
 
 /*map setting*/
@@ -217,9 +230,8 @@ body {
 }
 
 /* log in btn setting*/
-.btn {
-
-    display: inline-block;
+.btn-primary{
+    display:inline-flex;
     outline: 0;
     cursor: pointer;
     border-radius: 6px;
@@ -230,12 +242,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
     font-weight: 800;
     font-size: 18px;
-    height: 50px;
+    height: 45px;
     font-family: nasalization, sans-serif;
     text-align: center;
 }
-
-.btn:hover {
+.btn-primary:hover {
     background-color: #0b9b83;
     color: #fff;
 }
