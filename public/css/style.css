@@ -12,33 +12,39 @@ body {
 }
 
 /*HEMLOCK LOGO setting with media query*/
-.logo{
+.logo {
     display: flex;
     flex-wrap: wrap;
-    position: absolute; 
-    top: 11pt; left: 40pt; 
-  }
-  .logo {
+    position: absolute;
+    top: 11pt;
+    left: 40pt;
+}
+
+.logo {
     flex: 0 0 50%;
-  }
-  @media (min-width: 700px) {
+}
+
+@media (min-width: 700px) {
     .logo {
-      flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
     }
-  }
-  @media (min-width: 1100px) {
+}
+
+@media (min-width: 1100px) {
     .logo {
-      flex: 0 0 25%;
+        flex: 0 0 25%;
     }
-  }
-  .logo-center {
+}
+
+.logo-center {
     font-family: nasalization, sans-serif;
     font-weight: 800;
     font-style: normal;
     font-size: 80px;
-    color: rgb(35, 87, 99);
+    color: rgb(201, 238, 247);
     position: absolute;
     bottom: 100px;
+    left: 10px;
 }
 
 .header {
@@ -70,7 +76,7 @@ header {
 }
 
 p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: nasalization, sans-serif;
     text-align: center;
     font-size: large;
     font-weight: 200;
@@ -106,6 +112,7 @@ h3 {
 .secondrow p {
     margin-left: 10%;
     font-size: larger;
+    background-image: url(../images/meadow.jpg);;
 }
 
 /* Section are stacked on top of each other at 768px or smaller */
@@ -210,11 +217,5 @@ h2 {
         width: 300px;
         flex-direction: column;
     }
-
 }
 
-.instructor-card {
-    background-image: url(../images/group1.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-}
