@@ -35,7 +35,7 @@ body {
         flex: 0 0 25%;
     }
 }
-
+/*home page hemlock text*/
 .logo-center {
     font-family: nasalization, sans-serif;
     font-weight: 800;
@@ -43,14 +43,26 @@ body {
     font-size: 80px;
     color: rgb(201, 238, 247);
     position: absolute;
-    bottom: 100px;
-    left: 10px;
+    bottom: 300px;
+    left: 80px;
 }
-
 .header {
     font-family: nasalization, sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin:10%;
+}
+
+/*navbar setting with log in button*/
+.navbar-item {
+    font-family: nasalization, sans-serif;
+    color: rgb(7,146,104) ;
+    font-weight: 600;
+    font-size: larger;
+}
+.login{
+    background-color: rgb(7, 146, 104);  
+    color: aliceblue;
 }
 
 
@@ -66,27 +78,21 @@ body {
     color: black;
 }
 
-header {
-    text-align: center;
-    margin: 5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 50px;
-    color: white;
-}
+
 
 p {
-    font-family: nasalization, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: large;
-    font-weight: 200;
+    font-weight: 10;
+    color: rgb(252, 246, 238);
 }
 
 h1,
 h2 {
     font-size: 28px;
     color: rgb(7, 146, 104);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -98,10 +104,15 @@ h3 {
     text-align: center;
 }
 
-/*containor wrap*/
+/* about us page containor wrap*/
 .row {
     display: flex;
     margin: 5% 15%;
+    background-image:linear-gradient(
+        rgba(250, 244, 244, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ), url(../images/blurred-background.jpg);
+    background-size: cover;     
 }
 
 .firstrow {
@@ -112,7 +123,19 @@ h3 {
 .secondrow p {
     margin-left: 10%;
     font-size: larger;
-    background-image: url(../images/meadow.jpg);;
+    color: #252033;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin: 50px 40px;
+    font-weight: 400;
+}
+
+.secondrow h3 {
+    font-size: 50px;
+    color: #252033;
+    font-family: nasalization, sans-serif;
+    margin: 50px 40px;
+    font-weight: 400;
 }
 
 /* Section are stacked on top of each other at 768px or smaller */
@@ -145,11 +168,6 @@ header {
     padding: 0;
 }
 
-
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    justify-content: center;
-}
 
 h1,
 h2 {
@@ -195,7 +213,7 @@ h2 {
     padding: 24px 0 10px;
     color: rgb(141, 136, 136);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     box-sizing: border-box;
     text-align: left;
