@@ -5,8 +5,8 @@ const sequelize = require('../config/connection');
 class Member extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+  };
+};
 
 Member.init(
   {
@@ -14,7 +14,6 @@ Member.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,25 +33,21 @@ Member.init(
         allowNull: false,
         defaultValue: false,
       },
-
       tuesday: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false,
       },
-
       wednesday: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false,
       },
-
       thursday: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false,
       },
-
       friday: {
         type: DataTypes.BOOLEAN,
         allowNull: false,

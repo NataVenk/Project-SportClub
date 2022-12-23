@@ -5,15 +5,14 @@
       <h2 id="checkboxH2">Select activities you are interested in:</h2>
       <div>
         <form class="interest-form">
-            {{#each activities as |activity|}}
-            <input type="checkbox" id="activity{{activity.id}}" name="activity" value="{{activity.id}}">
-            <label for="activity{{activity.id}}"> {{activity.activity_name}}</label><br>
-            {{/each}}
-            <button type="submit" class="btn btn-primary">Submit</button>
+          {{#each activities as |activity|}}
+          <input type="checkbox" id="activity{{activity.id}}" name="activity" value="{{activity.id}}">
+          <label for="activity{{activity.id}}"> {{activity.activity_name}}</label><br>
+          {{/each}}
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        
       </div>
+    </div>
   </div>
-</div>
 
-<script src="./js/profile.js"></script>
+  <script src="./js/profile.js"></script>

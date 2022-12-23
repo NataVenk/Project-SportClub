@@ -7,7 +7,6 @@ const MemberActivity = require('./member-activities');
 Member.belongsToMany(Activity, {
   through: MemberActivity,
   foreignKey: 'member_id',
-
 });
 
 Activity.belongsToMany(Member, {
