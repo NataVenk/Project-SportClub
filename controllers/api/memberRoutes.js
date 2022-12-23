@@ -53,44 +53,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// router.post('/youractivity', (req, res) => {
-//   if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
-//   MemberActivity.destroy({ where: { member_id: req.session.user_id } })
-//     .then(() => {
-//       const array = req.body.activities.map(activity => {
-//         return {
-//           member_id: req.session.user_id,
-//           activity_id: activity
-//         }
-//       })
-//       return MemberActivity.bulkCreate(array)
-//     }).then(memberActs => {
-//       res.status(200).json("new activities updated")
-//     })
-//     .catch(err => {
-//       res.status(500).json(err)
-//     })
-// });
-
-// router.post('/youractivity', (req, res) => {
-//   if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
-//   MemberActivity.destroy({ where: { member_id: req.session.member_id } })
-//     .then(() => {
-//       const array = req.body.activity_id.map(activity_id => {
-//         return {
-//           member_id: req.body.member_id,
-//           activity_id: req.body.activity_id,
-//         }
-//       }
-//       return MemberActivity.bulkCreate(array);
-//     }).then(memberActs => {
-//       res.status(200).json("new activities updated")
-//     })
-//     .catch(err => {
-//       res.status(500).json(err)
-//     })
-// });
-
 router.put('/', (req, res) => {
   if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
   Member.update(req.body, {
@@ -109,25 +71,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
-// router.post('/member-interest', (req, res) => {
-//   if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
-
-//       const memberActs = req.body.activities.map(activity => {
-//         return {
-//           member_id: req.session.user_id,
-//           activity_id: activity
-//         }
-//       })
-//       return MemberActivity.bulkCreate(array)
-//     }).then(memberActs => {
-//       res.status(200).json("activities noted")
-//     })
-//     .catch(err => {
-//       res.status(500).json(err)
-//     })
-
-
-
 
 module.exports = router;

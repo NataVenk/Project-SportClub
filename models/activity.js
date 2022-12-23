@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Activity extends Model {}
+class Activity extends Model { }
 
 Activity.init(
   {
-   
+
     activity_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -43,11 +43,11 @@ Activity.init(
       allowNull: false,
     },
 
-   day5: {
+    day5: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    
+
   },
   {
     sequelize,

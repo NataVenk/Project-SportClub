@@ -26,7 +26,7 @@ const loginForm = async (event) => {
 };
 
 const signupForm = async (event) => {
- 
+
   event.preventDefault();
   console.log('Inside signupForm', "hello");
   const name = document.querySelector('#name-signup').value.trim();
