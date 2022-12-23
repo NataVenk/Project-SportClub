@@ -239,8 +239,7 @@ body {
         text-align: center;
     }
 
-    section.container1,
-    section#map-placeholder {
+section.container1, section#map-placeholder {
         position: relative;
         display: flex;
         margin: 0 auto;
@@ -259,7 +258,6 @@ body {
     background-image: url(../images/weights.jpg);
     background-repeat: no-repeat;
     font-family: nasalization, sans-serif;
-
 }
 
 /* log in btn setting*/
@@ -294,6 +292,7 @@ body {
     color: #252033;
 }
 
+/* member activities display styles */
 #memberactivitiesH2El {
     color: white;
     text-align: center;
@@ -304,6 +303,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#memberActivityNamePEl {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#memberActivityDescriptionPEl {
+    color: #d1c5c5;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
 }
 
 #updateactivityBtnDivEl {

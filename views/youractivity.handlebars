@@ -3,9 +3,8 @@
   <div class="col-auto" id="memberactivitiesDivEl">
     <div>
       {{#each user.activities as |activity|}}
-      <p>{{activity.activity_name}}</p>
-      <p>{{activity.description}}</p>
-      {{!-- {{activity.instructor_id}} --}}
+      <p id="memberActivityNamePEl">{{activity.activity_name}}</p>
+      <p id="memberActivityDescriptionPEl">{{activity.description}}</p>
       {{/each}}
     </div>
   </div>
