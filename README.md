@@ -55,7 +55,7 @@ The below screenshot captures the application's homepage. From here the user can
 
 The Log In page allows a user with an existing account to log in to their account and also provides a sign up section for new users to create their account.
 
-![Hemlock Fitness Log In Page](/public/images/readme/hemlock-login.png)
+![Hemlock Fitness Log In Page](/public/images/Web%20capture_23-12-2022_15414_localhost.jpeg)
 
 ### User Dashboard
 
