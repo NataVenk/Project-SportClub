@@ -31,9 +31,9 @@ source db/schema.sql
 
 exit
 
-node seeds/seeds.js
-
 node server
+
+node seeds/seeds.js
 
 ```
 
