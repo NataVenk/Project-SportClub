@@ -10,7 +10,7 @@
     },
     {
         "instructor_name": "Muchir",
-        "specialty": "yoga",
+        "specialty": "Yoga",
         "monday": true,
         "tuesday": true,
         "wednesday": true,
@@ -28,7 +28,7 @@
     },
     {
         "instructor_name": "Natalia",
-        "specialty": "cardio",
+        "specialty": "Cardio",
         "monday": true,
         "tuesday": true,
         "wednesday": true,
