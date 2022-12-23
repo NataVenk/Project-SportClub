@@ -15,7 +15,8 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
-//nav bar
+
+{{!-- nav bar  --}}
 <body>
   <nav class="navbar-brand box display-flex justify-space-between">
     <div class="navbar-brand">
@@ -63,6 +64,7 @@
     </div>
   </nav>
 
+  {{!-- handlebar main body --}}
   {{{body}}}
 
   <footer class="content-box" role="contentinfo">
@@ -78,7 +80,5 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
 </body>
-
 </html>
