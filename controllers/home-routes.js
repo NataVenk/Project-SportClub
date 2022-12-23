@@ -79,29 +79,7 @@ router.get('/youractivity', withAuth, async (req, res) => {
     }
   });
 
-//   // Use withAuth middleware to prevent access to route
-// router.get('/youractivity', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const memberData = await MemberActivity.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
-
-//     const user = userData.get({ plain: true });
-
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-
-//routing to member interest selection page
-
+  //routes to list of activities picked by member
   router.get('/member-interest', withAuth, async (req, res) => {
   
 try {
@@ -129,23 +107,6 @@ console.log(JSON.stringify(user, null, 2));
   }
 });
  
-
-// router.get('/member-interest', withAuth, async (req, res) => {
-//     try {
-// const memberfav = activityResults.map(value => value.get({ plain: true }))
-
-//       const memberData = await Member.findByPk(req.session.user_id, {
-//         attributes: { exclude: ['password'] },
-//         include: {model:Activity, through: MemberActivity},
-//       });
-
-
-// router.get('/memberlist', (req, res) => {
-//         Member.find({ include: { model: Activity, through: MemberActivity } })
-//           .then(members => {
-//             res.json(members)
-//           })
-//       });
 
 
 //routing to login/signup page
