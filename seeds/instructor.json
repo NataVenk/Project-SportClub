@@ -1,14 +1,5 @@
 [
     {
-        "instructor_name": "Matt",
-        "specialty": "CrossFit",
-        "monday": false,
-        "tuesday": true,
-        "wednesday": true,
-        "thursday": true,
-        "friday": true
-    },
-    {
         "instructor_name": "Alejandro",
         "specialty": "Strength Fitness",
         "monday": true,
@@ -18,13 +9,22 @@
         "friday": true
     },
     {
-        "instructor_name": "Paul",
-        "specialty": "Swimming",
+        "instructor_name": "Muchir",
+        "specialty": "yoga",
         "monday": true,
         "tuesday": true,
         "wednesday": true,
-        "thursday": true,
+        "thursday": false,
         "friday": false
+    },
+    {
+        "instructor_name": "Matt",
+        "specialty": "CrossFit",
+        "monday": false,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true
     },
     {
         "instructor_name": "Natalia",
@@ -36,12 +36,12 @@
         "friday": false
     },
     {
-        "instructor_name": "Muchir",
-        "specialty": "yoga",
+        "instructor_name": "Paul",
+        "specialty": "Swimming",
         "monday": true,
         "tuesday": true,
         "wednesday": true,
-        "thursday": false,
+        "thursday": true,
         "friday": false
     }
 ]
