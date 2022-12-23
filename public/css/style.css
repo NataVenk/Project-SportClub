@@ -51,6 +51,12 @@ body {
     color: aliceblue;
 }
 
+#login-form1, #signup-form1 {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
 .profile-picture {
     margin: 0
 }
@@ -134,7 +140,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
     header .row {
         position: relative;
         display: flex;
@@ -145,6 +150,10 @@ body {
 }
 
 /*page 3 our team*/
+#ourClassesDivWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 .instructor-card {
     display: inline-block;
     background-image: url(../images/group6.jpg);
@@ -183,23 +192,23 @@ body {
     text-align: center;
 }
 
-.class-card-header {
-    background-image: url(../images/group1.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .card-name {
     font-family: nasalization, sans-serif;
     margin: 1%;
     color: rgb(7, 146, 104);
+    font-size: 25px;
 }
 
 .card-dis {
     font-family: nasalization, sans-serif;
     color: rgb(22, 21, 20);
+    font-size: 20px;
 }
 
+#instructorsImg {
+    height: auto;
+    max-width: 95%;
+}
 
 /*page 5 contact us page setting*/
 .contactus {
@@ -239,8 +248,7 @@ body {
         text-align: center;
     }
 
-    section.container1,
-    section#map-placeholder {
+section.container1, section#map-placeholder {
         position: relative;
         display: flex;
         margin: 0 auto;
@@ -259,7 +267,6 @@ body {
     background-image: url(../images/weights.jpg);
     background-repeat: no-repeat;
     font-family: nasalization, sans-serif;
-
 }
 
 /* log in btn setting*/
@@ -285,25 +292,35 @@ body {
     color: #fff;
 }
 
-/*after log in page styling*/
-.interest-form {
-    margin-left: 45%;
-}
-
 .col-md-6 h3 {
     color: #252033;
 }
 
+/* member activities display styles */
 #memberactivitiesH2El {
     color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #memberactivitiesDivEl {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#memberActivityNamePEl {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#memberActivityDescriptionPEl {
+    color: #d1c5c5;
+    text-align: center;
+    font-size: 20px;
+    font-style: italic;
 }
 
 #updateactivityBtnDivEl {
@@ -333,6 +350,25 @@ body {
     background-color: #0b9b83;
     color: #fff;
 }
+
+/* checkbox styling rules */
+#checkboxFormWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#checkboxH2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.interest-form {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
 
 /*after submit return page*/
 .col-auto {

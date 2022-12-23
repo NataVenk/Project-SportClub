@@ -1,9 +1,6 @@
 
-
 const seedDatabase = require("./seeds");
 
-
-seedDatabase(function(){
-
+seedDatabase(function () {
   process.exit(0);
 });

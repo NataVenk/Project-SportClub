@@ -5,9 +5,6 @@ const routes = require('./controllers');
 const session = require('express-session');
 require('dotenv').config(); // allow access to .env
 
-// const helpers = require('./utils/helpers');
-// const hbs = exphbs.create({ helpers });
-
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 

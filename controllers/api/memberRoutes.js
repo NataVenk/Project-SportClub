@@ -54,7 +54,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 router.put('/', (req, res) => {
   if (!req.session.logged_in) { res.status(400).json("you need to be logged in") }
   Member.update(req.body, {
@@ -73,6 +72,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
 
 module.exports = router;

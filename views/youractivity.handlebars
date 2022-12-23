@@ -1,14 +1,11 @@
 {{!-- display activities that member selected --}}
-
-
 <div class="row">
-  <h2 id="memberactivitiesH2El">Personalized schedule for :{{user.name}}!</h2>
+  <h2 id="memberactivitiesH2El">Personalized schedule for: {{user.name}}!</h2>
   <div class="col-auto" id="memberactivitiesDivEl">
     <div>
       {{#each user.activities as |activity|}}
-      <p>{{activity.activity_name}}</p>
-      <p>{{activity.description}}</p>
-      {{!-- {{activity.instructor_id}} --}}
+      <p id="memberActivityNamePEl">{{activity.activity_name}}</p>
+      <p id="memberActivityDescriptionPEl">{{activity.description}}</p>
       {{/each}}
     </div>
   </div>
@@ -17,4 +14,3 @@
 <div id="updateactivityBtnDivEl">
   <a href="/member-interest" class="button" type="submit" id="updateactivityBtn">Update your activity</a>
 </div>
-

@@ -3,102 +3,102 @@ const { Instructor, Activity, MemberActivity, Member } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/test', (req, res) => {
-    res.send('working',
-    {logged_in: req.session.logged_in});
+  res.send('working',
+    { logged_in: req.session.logged_in });
 })
 
 //routing to homepage
-router.get ('/', async (req,res)=> {
-    res.render('index', {
-        logged_in: req.session.logged_in
-    });
+router.get('/', async (req, res) => {
+  res.render('index', {
+    logged_in: req.session.logged_in
+  });
 })
 
 //routing to About us
 router.get('/about-us', (req, res) => {
-    res.render('page2-aboutus', {
-        logged_in: req.session.logged_in
-    });
+  res.render('page2-aboutus', {
+    logged_in: req.session.logged_in
+  });
 });
 
 
 //routing to contact us page
 router.get('/contact-us', (req, res) => {
-    res.render('page5-contactus',{
-        logged_in: req.session.logged_in});
+  res.render('page5-contactus', {
+    logged_in: req.session.logged_in
+  });
 })
 
 //routing to instructors
 router.get('/instrList', async (req, res) => {
-    const instructorResults = await Instructor.findAll({
+  const instructorResults = await Instructor.findAll({
 
-    })
-    const instructors = instructorResults.map(value => value.get({ plain: true }))
-    return res.render('instrList', {
-        instructors: instructors,
-        logged_in: req.session.logged_in
-    });
+  })
+  const instructors = instructorResults.map(value => value.get({ plain: true }))
+  return res.render('instrList', {
+    instructors: instructors,
+    logged_in: req.session.logged_in
+  });
 });
 //routing to all activities
 router.get('/activlist', async (req, res) => {
-    const activityResults = await Activity.findAll({
-include: "instructor"
-    })
-    const activities = activityResults.map(value => value.get({ plain: true }))
-    console.log(activities);
-    return res.render('activity', {
-        activities,
-        logged_in: req.session.logged_in
-    });
+  const activityResults = await Activity.findAll({
+    include: "instructor"
+  })
+  const activities = activityResults.map(value => value.get({ plain: true }))
+  console.log(activities);
+  return res.render('activity', {
+    activities,
+    logged_in: req.session.logged_in
+  });
 });
 
 //routing to existing member activity
 router.get('/youractivity', withAuth, async (req, res) => {
-    try {
-      // Find the logged in user based on the session ID
-      const memberData = await Member.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-        include: [
-          {
-            model: Activity,
-            through: MemberActivity, 
-          }
-        ],
-      });
-      console.log("============")
-    
-      const user = memberData.get({ plain: true });
-      console.log(JSON.stringify(user, null, 2))
-      res.render('youractivity', {
-        user,
-        logged_in: true
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
-
-  //routes to list of activities picked by member
-  router.get('/member-interest', withAuth, async (req, res) => {
-  
-try {
+  try {
     // Find the logged in user based on the session ID
     const memberData = await Member.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: {model:Activity, through: MemberActivity},
+      include: [
+        {
+          model: Activity,
+          through: MemberActivity,
+        }
+      ],
+    });
+    console.log("============")
+
+    const user = memberData.get({ plain: true });
+    console.log(JSON.stringify(user, null, 2))
+    res.render('youractivity', {
+      user,
+      logged_in: true
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//routing to member interest selection page
+router.get('/member-interest', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const memberData = await Member.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: { model: Activity, through: MemberActivity },
     });
     console.log("============")
     const activityResults = await Activity.findAll({
       include: "instructor"
-          })
-          const activities = activityResults.map(value => value.get({ plain: true }))
-          console.log(activities);
+    })
+    const activities = activityResults.map(value => value.get({ plain: true }))
+    console.log(activities);
 
     const user = memberData.get({ plain: true });
-console.log(JSON.stringify(user, null, 2));
+    console.log(JSON.stringify(user, null, 2));
     res.render('member-interest', {
-      ...user, 
+      ...user,
       activities,
       logged_in: req.session.logged_in
     });
@@ -106,19 +106,16 @@ console.log(JSON.stringify(user, null, 2));
     res.status(500).json(err);
   }
 });
- 
-
 
 //routing to login/signup page
 router.get('/login', (req, res) => {
-    console.log("AM I LOGGED IN??", req.session.logged_in)
-    if(req.session.logged_in){
-        res.redirect('/')
-        return
-    }
-    res.render('login');
+  console.log("AM I LOGGED IN??", req.session.logged_in)
+  if (req.session.logged_in) {
+    res.redirect('/')
+    return
+  }
+  res.render('login');
 });
-
 
 module.exports = router;
 

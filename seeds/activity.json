@@ -31,7 +31,7 @@
     },
     {
         "activity_name": "Cardio",
-        "description": "An activty to elevate your heart rate",
+        "description": "An activity to elevate your heart rate",
         "instructor_id": 4,
         "day1": true,
         "day2": false,

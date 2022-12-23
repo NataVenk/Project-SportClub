@@ -2,12 +2,9 @@
 const newActivity = async (event) => {
   event.preventDefault();
   const checks = document.querySelectorAll('input[type="checkbox"]:checked');
-  // console.log(checks);
   const activityIds = [];
   checks.forEach(check => activityIds.push(parseInt(check.value)));
   console.log(activityIds);
-    
-    
     if (activityIds.length) {
       const response = await fetch(`/api/activity-routes/newMemberActivities`, {
         method: 'POST',
@@ -21,8 +18,8 @@ const newActivity = async (event) => {
         alert('Failed to update');
       }
     }
-  };
+  }
+};
 
-  document.querySelector(".interest-form").addEventListener("submit", newActivity)
-  
-  
+document.querySelector(".interest-form").addEventListener("submit", newActivity)
+

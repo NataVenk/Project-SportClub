@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Instructor extends Model {}
+class Instructor extends Model { }
 
 Instructor.init(
   {
-   
+
     instructor_name: {
       type: DataTypes.STRING,
       allowNull: false,

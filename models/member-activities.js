@@ -1,11 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class MemberActivity extends Model {}
+class MemberActivity extends Model { }
 
 MemberActivity.init(
   {
-   
     activity_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,7 +23,6 @@ MemberActivity.init(
         unique: false,
       },
     },
-  
   },
   {
     sequelize,
