@@ -22,7 +22,4 @@ const gotoMemberInterest = (event) => {
       });
 }
 
-
-
-
 document.querySelector("#updateactivityBtn").addEventListener("click", gotoMemberInterest);

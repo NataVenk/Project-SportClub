@@ -1,7 +1,7 @@
 const newActivity = async (event) => {
   event.preventDefault();
   const checks = document.querySelectorAll('input[type="checkbox"]:checked');
-  console.log(checks);
+  // console.log(checks);
   const activityIds = [];
   checks.forEach(check => activityIds.push(parseInt(check.value)));
   console.log(activityIds);

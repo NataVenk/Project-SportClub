@@ -4,8 +4,8 @@
   <div class="col-auto" id="memberactivitiesDivEl">
     <div>
       {{#each user.activities as |activity|}}
-      {{activity.activity_name}}
-      {{!-- {{activity.description}} --}}
+      <p>{{activity.activity_name}}</p>
+      <p>{{activity.description}}</p>
       {{!-- {{activity.instructor_id}} --}}
       {{/each}}
     </div>
