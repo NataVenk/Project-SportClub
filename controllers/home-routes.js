@@ -45,7 +45,7 @@ router.get('/activlist', async (req, res) => {
 include: "instructor"
     })
     const activities = activityResults.map(value => value.get({ plain: true }))
-    console.log(activities)
+    console.log(activities);
     return res.render('activity', {
         activities,
         logged_in: req.session.logged_in
@@ -114,7 +114,7 @@ try {
   
 
     const user = memberData.get({ plain: true });
-console.log(user)
+console.log(JSON.stringify(user, null, 2));
     res.render('member-interest', {
       ...user,
       logged_in: req.session.logged_in

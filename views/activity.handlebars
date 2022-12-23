@@ -1,3 +1,4 @@
-{{#each activities}}
-  {{> page4-activity activity_name=this.class_name description=this.description instructor_name=this.instructor.instructor_name}}
+{{#each activities as |activity|}}
+  {{> page4-activity activity=activity}}
 {{/each}}
+

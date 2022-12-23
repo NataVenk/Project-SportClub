@@ -2,14 +2,18 @@
 
   <div class="class-card-header">
 
-    <p> {{activity_name}}</p>
+    <p>{{activity.activity_name}}</p>
     <p>
     <div class="card-name"><b>Instructor:</b><br></div>
-    <div class="card-dis">{{instructor_name}}</div>
-    </p>
-    <p>
+    <div class="card-dis">
+      <p>
+        {{activity.instructor.instructor_name}}
+        (specialty: {{activity.instructor.specialty}})
+      </p>
+    </div>
+
     <div class="card-name"><b>Description:</b><br></div>
-    <div class="card-dis"> {{description}}
+    <div class="card-dis"> {{activity.description}}
     </div>
     </p>
   </div>
