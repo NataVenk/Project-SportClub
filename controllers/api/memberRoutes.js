@@ -21,6 +21,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+//login existing member
 router.post('/login', async (req, res) => {
   try {
     const userData = await Member.findOne({ where: { email: req.body.email } });

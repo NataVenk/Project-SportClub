@@ -80,10 +80,8 @@ router.get('/youractivity', withAuth, async (req, res) => {
   }
 });
 
-
 //routing to member interest selection page
 router.get('/member-interest', withAuth, async (req, res) => {
-
   try {
     // Find the logged in user based on the session ID
     const memberData = await Member.findByPk(req.session.user_id, {
