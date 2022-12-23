@@ -51,6 +51,12 @@ body {
     color: aliceblue;
 }
 
+#login-form1, #signup-form1 {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
 .profile-picture {
     margin: 0
 }
@@ -187,9 +193,7 @@ body {
 }
 
 .class-card-header {
-    background-image: url(../images/group1.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    
 }
 
 .card-name {
