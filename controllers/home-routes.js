@@ -111,12 +111,17 @@ try {
       include: {model:Activity, through: MemberActivity},
     });
     console.log("============")
-  
+    const activityResults = await Activity.findAll({
+      include: "instructor"
+          })
+          const activities = activityResults.map(value => value.get({ plain: true }))
+          console.log(activities);
 
     const user = memberData.get({ plain: true });
 console.log(JSON.stringify(user, null, 2));
     res.render('member-interest', {
-      ...user,
+      ...user, 
+      activities,
       logged_in: req.session.logged_in
     });
   } catch (err) {
