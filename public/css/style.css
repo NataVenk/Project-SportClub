@@ -192,21 +192,23 @@ body {
     text-align: center;
 }
 
-.class-card-header {
-    
-}
-
 .card-name {
     font-family: nasalization, sans-serif;
     margin: 1%;
     color: rgb(7, 146, 104);
+    font-size: 25px;
 }
 
 .card-dis {
     font-family: nasalization, sans-serif;
     color: rgb(22, 21, 20);
+    font-size: 20px;
 }
 
+#instructorsImg {
+    height: auto;
+    max-width: 95%;
+}
 
 /*page 5 contact us page setting*/
 .contactus {
@@ -290,11 +292,6 @@ section.container1, section#map-placeholder {
     color: #fff;
 }
 
-/*after log in page styling*/
-.interest-form {
-    margin-left: 45%;
-}
-
 .col-md-6 h3 {
     color: #252033;
 }
@@ -303,7 +300,7 @@ section.container1, section#map-placeholder {
 #memberactivitiesH2El {
     color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #memberactivitiesDivEl {
@@ -315,14 +312,14 @@ section.container1, section#map-placeholder {
 #memberActivityNamePEl {
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 #memberActivityDescriptionPEl {
     color: #d1c5c5;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-style: italic;
 }
 
@@ -353,6 +350,25 @@ section.container1, section#map-placeholder {
     background-color: #0b9b83;
     color: #fff;
 }
+
+/* checkbox styling rules */
+#checkboxFormWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#checkboxH2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.interest-form {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
 
 /*after submit return page*/
 .col-auto {

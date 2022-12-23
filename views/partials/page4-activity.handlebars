@@ -1,25 +1,27 @@
+{{!-- Out Classes page partial handlebar --}}
 <div class="class-card box block is-medium">
-  
-  <div class="class-card-header">
-    <img src="../images/group1.jpg" alt="Instructors Image">
-  </div>
-
-  <div id="ourClassDescriptionsCards">
-
-    <p>{{activity.activity_name}}</p>
-
-    <div class="card-name"><b>Instructor:</b><br></div>
-
-    <div class="card-dis">
-      <p>
-        {{activity.instructor.instructor_name}}
-        (specialty: {{activity.instructor.specialty}})
-      </p>
+  <div class="class-card-header" id="activitiesCardDisplay">
+    <div>
+      <img src="../images/group1.jpg" alt="Instructors Image" id="instructorsImg">
     </div>
 
-    <div class="card-name"><b>Description:</b><br></div>
-
-    <div class="card-dis"> {{activity.description}}</div>
-    
+    <div id="ourClassDescriptionsCards">
+      <div class="card-name">
+        <b>Class:</b><br>
+      </div>
+      <div class="card-dis">
+        <p>
+          {{activity.activity_name}}
+          {{!-- {{activity.instructor.instructor_name}}
+          (specialty: {{activity.instructor.specialty}}) --}}
+        </p>
+      </div>
+      <div class="card-name">
+        <b>Class Description:</b><br>
+      </div>
+      <div class="card-dis"> 
+        {{activity.description}}
+      </div>
+    </div>
   </div>
 </div>
